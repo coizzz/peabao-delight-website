@@ -1,22 +1,30 @@
 import { Layout } from "@/components/Layout";
-import { Users, MapPin, Heart, Target, Leaf, Package, HandHeart } from "lucide-react";
+import { Users, Heart, Leaf, Package, HandHeart, UserCheck, MapPinned, Brain, TrendingUp, Sparkles } from "lucide-react";
 import heroBao from "@/assets/hero-bao.jpg";
 
 const segmentations = [
   {
     title: "Demographic",
+    icon: UserCheck,
+    color: "peach",
     items: ["Ages 15–40", "Students & young professionals", "Families and friend groups", "Dessert enthusiasts"]
   },
   {
     title: "Geographic",
+    icon: MapPinned,
+    color: "mango",
     items: ["Metro Manila & nearby cities", "Delivery-friendly locations", "Urban areas with dessert culture", "Pick-up friendly zones"]
   },
   {
     title: "Psychographic",
+    icon: Brain,
+    color: "leaf",
     items: ["Nostalgic Filipino flavor lovers", "Adventurous dessert explorers", "Social media foodies", "Gift-givers and sharers"]
   },
   {
     title: "Behavioral",
+    icon: TrendingUp,
+    color: "cocoa",
     items: ["Loves limited drops & promos", "Enjoys shareable snacks", "Active on social platforms", "Values quality over quantity"]
   }
 ];
@@ -117,36 +125,86 @@ export default function About() {
             </p>
           </div>
 
-          <div className="bg-card rounded-3xl p-8 md:p-12 shadow-card">
-            <div className="flex items-center gap-3 mb-6">
-              <Target className="w-6 h-6 text-primary" />
-              <h3 className="font-heading text-xl font-bold text-cocoa">Our Primary Focus</h3>
+          {/* Primary Focus - New Design */}
+          <div className="relative mb-16">
+            <div className="absolute inset-0 bg-gradient-to-r from-peach via-mango to-peach rounded-3xl opacity-20 blur-xl" />
+            <div className="relative bg-gradient-to-r from-peach/90 to-mango/90 rounded-3xl p-8 md:p-12 overflow-hidden">
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
+              
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border-4 border-white/30">
+                    <Sparkles className="w-10 h-10 md:w-12 md:h-12 text-cocoa" />
+                  </div>
+                </div>
+                <div className="text-center md:text-left">
+                  <span className="inline-block px-4 py-1 rounded-full bg-white/20 text-cocoa font-heading font-semibold text-sm mb-3">
+                    Our Primary Focus
+                  </span>
+                  <h3 className="font-heading text-2xl md:text-3xl font-bold text-cocoa mb-3">
+                    Gen Z & Millennials in Metro Manila
+                  </h3>
+                  <p className="text-cocoa/80 text-lg max-w-2xl">
+                    Young dessert lovers who crave Filipino-inspired flavors, trend-forward snacks, 
+                    and experiences worth sharing on social media.
+                  </p>
+                </div>
+              </div>
             </div>
-            <p className="text-cocoa-light text-lg mb-8 p-4 bg-mango/10 rounded-xl border-l-4 border-mango">
-              Gen Z and Millennials in Metro Manila who love Filipino-inspired desserts, 
-              trend-forward snacks, and experiences worth sharing on social media.
-            </p>
-            
-            <h3 className="font-heading text-xl font-bold text-cocoa mb-6">
+          </div>
+          
+          {/* Market Segmentation - New Design */}
+          <div className="text-center mb-10">
+            <h3 className="font-heading text-2xl md:text-3xl font-bold text-cocoa">
               Market Segmentation
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {segmentations.map((segment) => (
-                <div key={segment.title} className="bg-cream-light rounded-2xl p-6">
-                  <h4 className="font-heading font-bold text-cocoa mb-4 pb-2 border-b border-border">
-                    {segment.title}
-                  </h4>
-                  <ul className="space-y-2">
+            <p className="text-cocoa-light mt-2">Understanding our customers from every angle</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {segmentations.map((segment, index) => {
+              const IconComponent = segment.icon;
+              const colorClasses = {
+                peach: { bg: "bg-peach/10", border: "border-peach/30", icon: "text-peach", dot: "bg-peach" },
+                mango: { bg: "bg-mango/10", border: "border-mango/30", icon: "text-mango", dot: "bg-mango" },
+                leaf: { bg: "bg-leaf/10", border: "border-leaf/30", icon: "text-leaf", dot: "bg-leaf" },
+                cocoa: { bg: "bg-cocoa/10", border: "border-cocoa/30", icon: "text-cocoa", dot: "bg-cocoa" }
+              }[segment.color];
+              
+              return (
+                <div 
+                  key={segment.title} 
+                  className={`group relative bg-card rounded-2xl p-6 border-2 ${colorClasses.border} hover:shadow-elevated transition-all duration-300 hover:-translate-y-1`}
+                >
+                  {/* Header */}
+                  <div className="flex items-center gap-4 mb-5">
+                    <div className={`w-14 h-14 rounded-xl ${colorClasses.bg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <IconComponent className={`w-7 h-7 ${colorClasses.icon}`} />
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-bold text-xl text-cocoa">
+                        {segment.title}
+                      </h4>
+                      <div className={`h-1 w-12 ${colorClasses.dot} rounded-full mt-1`} />
+                    </div>
+                  </div>
+                  
+                  {/* Items as tags */}
+                  <div className="flex flex-wrap gap-2">
                     {segment.items.map((item) => (
-                      <li key={item} className="text-cocoa-light text-sm flex items-start gap-2">
-                        <span className="text-mango mt-1">•</span>
+                      <span 
+                        key={item} 
+                        className={`px-3 py-1.5 ${colorClasses.bg} rounded-full text-sm text-cocoa font-medium`}
+                      >
                         {item}
-                      </li>
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
