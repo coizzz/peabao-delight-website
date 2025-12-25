@@ -144,10 +144,13 @@ export default function Shop() {
         </div>
       </section>
 
-      {/* Location Section */}
-      <section className="section-padding bg-cream">
+      {/* Location Section - New Design */}
+      <section className="section-padding bg-cream overflow-hidden">
         <div className="container-main mx-auto">
           <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 rounded-full bg-mango/20 text-cocoa font-heading font-semibold text-sm mb-4">
+              📍 Find Us
+            </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-cocoa mb-4">
               Where to Get Peabao
             </h2>
@@ -156,61 +159,98 @@ export default function Shop() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {/* Delivery Card */}
-            <div className="bg-card rounded-2xl p-8 shadow-card">
-              <div className="w-14 h-14 rounded-2xl bg-peach/20 flex items-center justify-center mb-6">
-                <Truck className="w-7 h-7 text-peach" />
-              </div>
-              <h3 className="font-heading text-xl font-bold text-cocoa mb-3">
-                Delivery
-              </h3>
-              <p className="text-cocoa-light mb-4">
-                Available for delivery within Metro Manila. Orders are usually delivered within 1-2 days after confirmation.
-              </p>
-              <ul className="space-y-2 text-cocoa-light text-sm">
-                <li className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-mango" />
-                  Metro Manila coverage
-                </li>
-                <li className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-mango" />
-                  1-2 day delivery
-                </li>
-              </ul>
-            </div>
+          {/* Location Cards - New Layout */}
+          <div className="max-w-5xl mx-auto">
+            <div className="relative bg-gradient-to-br from-peach/10 via-mango/10 to-peach/10 rounded-3xl p-6 md:p-10">
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-mango/20 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-40 h-40 bg-peach/20 rounded-full blur-3xl" />
+              
+              <div className="relative grid md:grid-cols-2 gap-6">
+                {/* Delivery Card */}
+                <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-peach/30">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-peach to-mango flex items-center justify-center flex-shrink-0 shadow-soft">
+                      <Truck className="w-8 h-8 text-cocoa" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-heading text-xl font-bold text-cocoa mb-2">
+                        Delivery
+                      </h3>
+                      <p className="text-cocoa-light text-sm mb-4">
+                        We deliver within Metro Manila. Orders are usually delivered within 1-2 days after confirmation.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-peach/10 rounded-full text-xs font-medium text-cocoa">
+                          <MapPin className="w-3.5 h-3.5" />
+                          Metro Manila
+                        </span>
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-mango/10 rounded-full text-xs font-medium text-cocoa">
+                          <Clock className="w-3.5 h-3.5" />
+                          1-2 Days
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-            {/* Pick-up Card */}
-            <div className="bg-card rounded-2xl p-8 shadow-card">
-              <div className="w-14 h-14 rounded-2xl bg-mango/20 flex items-center justify-center mb-6">
-                <ShoppingBag className="w-7 h-7 text-mango" />
+                {/* Pick-up Card */}
+                <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-mango/30">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-mango to-peach flex items-center justify-center flex-shrink-0 shadow-soft">
+                      <ShoppingBag className="w-8 h-8 text-cocoa" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-heading text-xl font-bold text-cocoa mb-2">
+                        Pick-up Point
+                      </h3>
+                      <p className="text-cocoa-light text-sm mb-4">
+                        Prefer to pick up? Schedule a pick-up at our location in Fairview, Quezon City.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-mango/10 rounded-full text-xs font-medium text-cocoa">
+                          <MapPin className="w-3.5 h-3.5" />
+                          Fairview, QC
+                        </span>
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-leaf/10 rounded-full text-xs font-medium text-cocoa">
+                          <Clock className="w-3.5 h-3.5" />
+                          By Schedule
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-heading text-xl font-bold text-cocoa mb-3">
-                Pick-up Point
-              </h3>
-              <p className="text-cocoa-light mb-4">
-                Prefer to pick up? Schedule a pick-up at our location in Taguig, Metro Manila.
-              </p>
-              <ul className="space-y-2 text-cocoa-light text-sm">
-                <li className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-mango" />
-                  Taguig, Metro Manila
-                </li>
-                <li className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-mango" />
-                  By schedule only
-                </li>
-              </ul>
-            </div>
-          </div>
 
-          {/* Map placeholder */}
-          <div className="mt-8 max-w-4xl mx-auto">
-            <div className="bg-cocoa/5 rounded-2xl h-64 flex items-center justify-center border-2 border-dashed border-cocoa/20">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-cocoa/30 mx-auto mb-3" />
-                <p className="text-cocoa-light">Taguig, Metro Manila</p>
-                <p className="text-cocoa-light/70 text-sm">Exact location shared upon order confirmation</p>
+              {/* Location Highlight */}
+              <div className="mt-8 bg-cocoa rounded-2xl p-6 md:p-8 text-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-4 border-cream-light rounded-full" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-4 border-cream-light rounded-full" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-cream-light rounded-full" />
+                </div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-peach to-mango flex items-center justify-center mx-auto mb-4 shadow-elevated animate-pulse-soft">
+                    <MapPin className="w-8 h-8 text-cocoa" />
+                  </div>
+                  <h4 className="font-heading text-xl md:text-2xl font-bold text-cream-light mb-2">
+                    Fairview, Quezon City
+                  </h4>
+                  <p className="text-cream-light/70 text-sm max-w-md mx-auto">
+                    Exact location will be shared upon order confirmation. Message us to schedule your pick-up!
+                  </p>
+                  <div className="mt-4 flex flex-wrap justify-center gap-3">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-cream-light/10 rounded-full text-sm text-cream-light">
+                      🏠 Home-based
+                    </span>
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-cream-light/10 rounded-full text-sm text-cream-light">
+                      🚗 Easy parking
+                    </span>
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-cream-light/10 rounded-full text-sm text-cream-light">
+                      📍 Near SM Fairview
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

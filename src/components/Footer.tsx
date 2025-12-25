@@ -91,7 +91,7 @@ export function Footer() {
                 </a>
               </li>
               <li>Tue–Sun: 11:00 AM – 8:00 PM</li>
-              <li>Metro Manila, Philippines</li>
+              <li>Fairview, Quezon City</li>
             </ul>
           </div>
         </div>

@@ -110,7 +110,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-heading font-semibold text-cocoa mb-1">Location</h3>
-                    <p className="text-cocoa-light">Taguig, Metro Manila</p>
+                    <p className="text-cocoa-light">Fairview, Quezon City</p>
                     <p className="text-cocoa-light/60 text-sm mt-1">Pick-up by schedule only</p>
                   </div>
                 </div>
