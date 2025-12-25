@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import peabaoLogo from "@/assets/peabao-logo.png";
+import peabaoLogo from "@/assets/peabao-logo-clean.png";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -21,11 +21,13 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={peabaoLogo} 
-              alt="Peabao Delight Logo" 
-              className="w-12 h-12 md:w-14 md:h-14 object-contain group-hover:scale-105 transition-transform duration-300"
-            />
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-peach/20 to-mango/30 flex items-center justify-center overflow-hidden shadow-soft group-hover:shadow-card transition-all duration-300">
+              <img 
+                src={peabaoLogo} 
+                alt="Peabao Delight Logo" 
+                className="w-12 h-12 md:w-14 md:h-14 object-contain group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
             <span 
               className="text-primary text-xl md:text-2xl tracking-wide"
               style={{ fontFamily: "'Luckiest Guy', cursive", textShadow: '2px 2px 0 hsl(var(--cocoa) / 0.3)' }}

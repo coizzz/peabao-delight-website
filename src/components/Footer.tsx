@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Music2 } from "lucide-react";
-import peabaoLogo from "@/assets/peabao-logo.png";
+import peabaoLogo from "@/assets/peabao-logo-clean.png";
 
 export function Footer() {
   return (
@@ -10,11 +10,13 @@ export function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img 
-                src={peabaoLogo} 
-                alt="Peabao Delight Logo" 
-                className="w-14 h-14 object-contain"
-              />
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-peach/30 to-mango/40 flex items-center justify-center overflow-hidden">
+                <img 
+                  src={peabaoLogo} 
+                  alt="Peabao Delight Logo" 
+                  className="w-14 h-14 object-contain"
+                />
+              </div>
               <span 
                 className="text-primary text-2xl"
                 style={{ fontFamily: "'Luckiest Guy', cursive", textShadow: '2px 2px 0 hsl(var(--background) / 0.2)' }}
