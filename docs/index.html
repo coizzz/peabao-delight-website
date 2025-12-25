@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+  (function () {
+    const redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect !== location.href) {
+      history.replaceState(null, "", redirect.replace(location.origin, ""));
+    }
+  })();
+</script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Peabao Delight | Filipino Dessert in a Bao | Peach Mango Xiao Long Bao</title>
+    <meta name="description" content="Peabao Delight offers Filipino-inspired dessert xiao long bao with our signature Peach Mango flavor. Fresh, handcrafted, and perfect for sharing. Order now for Metro Manila delivery!" />
+    <meta name="author" content="Peabao Delight" />
+    <meta name="keywords" content="Filipino dessert, peach mango, xiao long bao dessert, Metro Manila delivery, dessert bao, Filipino food, merienda, Peabao Delight, peach mango pie, dimsum dessert" />
+    <link rel="canonical" href="https://peabaodelight.com" />
+
+    <meta property="og:title" content="Peabao Delight | Filipino Dessert in a Bao" />
+    <meta property="og:description" content="A warm peach-mango filling wrapped in a soft, delicate bao. Experience Filipino dessert comfort in every bite! Order now in Metro Manila." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:url" content="https://peabaodelight.com" />
+    <meta property="og:site_name" content="Peabao Delight" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@peabaodelight" />
+    <meta name="twitter:title" content="Peabao Delight | Filipino Dessert in a Bao" />
+    <meta name="twitter:description" content="Peach Mango Xiao Long Bao - Filipino dessert comfort wrapped in joy!" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "name": "Peabao Delight",
+      "description": "Filipino-inspired dessert xiao long bao featuring our signature Peach Mango flavor",
+      "image": "https://lovable.dev/opengraph-image-p98pqg.png",
+      "telephone": "+639171862249",
+      "email": "peabaodelight@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Taguig",
+        "addressRegion": "Metro Manila",
+        "addressCountry": "PH"
+      },
+      "openingHours": "Tu-Su 11:00-20:00",
+      "priceRange": "₱₱",
+      "servesCuisine": "Filipino Dessert",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61585103797635",
+        "https://www.instagram.com/peabao_delight/"
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
