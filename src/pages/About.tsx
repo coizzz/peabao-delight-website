@@ -1,5 +1,17 @@
 import { Layout } from "@/components/Layout";
-import { Users, Heart, Leaf, Package, HandHeart, UserCheck, MapPinned, Brain, TrendingUp, Sparkles, LucideIcon } from "lucide-react";
+import {
+  Users,
+  Heart,
+  Leaf,
+  Package,
+  HandHeart,
+  UserCheck,
+  MapPinned,
+  Brain,
+  TrendingUp,
+  Sparkles,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import heroBao from "@/assets/hero-bao.jpg";
 
 type ColorKey = "peach" | "mango" | "leaf" | "cocoa";
