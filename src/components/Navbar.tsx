@@ -25,7 +25,7 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-soft group-hover:shadow-card transition-all duration-300 border border-border/30">
-              <img alt="Peabao Delight Logo" className="w-[90%] h-[90%] object-contain group-hover:scale-105 transition-transform duration-300" src="/lovable-uploads/4f453dcd-0a1f-4c7e-9a84-5523f5decfb4.png" />
+              <img alt="Peabao Delight Logo" src="/lovable-uploads/4f453dcd-0a1f-4c7e-9a84-5523f5decfb4.png" className="w-[90%] h-[90%] group-hover:scale-105 transition-transform duration-300 object-cover" />
             </div>
             <span className="text-primary text-xl md:text-2xl tracking-wide" style={{
             fontFamily: "'Luckiest Guy', cursive",
