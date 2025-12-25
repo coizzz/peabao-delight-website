@@ -10,11 +10,11 @@ export function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-peach/30 to-mango/40 flex items-center justify-center overflow-hidden">
+              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center overflow-hidden border border-cream-light/20">
                 <img 
                   src={peabaoLogo} 
                   alt="Peabao Delight Logo" 
-                  className="w-14 h-14 object-contain"
+                  className="w-[90%] h-[90%] object-contain"
                 />
               </div>
               <span 
