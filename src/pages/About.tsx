@@ -212,7 +212,7 @@ export default function About() {
           <div className="mt-16 max-w-2xl mx-auto">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-peach/30 to-mango/30 rounded-3xl blur-2xl" />
-              <img alt="Peabao Delight - Peach Mango Xiao Long Bao" className="relative w-full rounded-3xl shadow-elevated" src="/lovable-uploads/c667bb05-f0bc-4298-bd43-f80eb56cdbd0.png" />
+              <img alt="Peabao Delight - Peach Mango Xiao Long Bao" className="relative w-full rounded-3xl shadow-elevated" src="/lovable-uploads/896fef09-37c7-4f22-9d0b-0d265679a44a.png" />
               <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-card rounded-2xl p-4 md:p-6 shadow-elevated">
                 <p className="font-heading font-bold text-cocoa text-lg md:text-xl">"Filipino dessert</p>
                 <p className="font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-peach to-mango text-lg md:text-xl">in a bao."</p>
