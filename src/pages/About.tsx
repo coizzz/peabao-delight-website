@@ -1,8 +1,24 @@
 import { Layout } from "@/components/Layout";
-import { Users, Heart, Leaf, Package, HandHeart, UserCheck, MapPinned, Brain, TrendingUp, Sparkles } from "lucide-react";
+import { Users, Heart, Leaf, Package, HandHeart, UserCheck, MapPinned, Brain, TrendingUp, Sparkles, LucideIcon } from "lucide-react";
 import heroBao from "@/assets/hero-bao.jpg";
 
-const segmentations = [
+type ColorKey = "peach" | "mango" | "leaf" | "cocoa";
+
+interface Segmentation {
+  title: string;
+  icon: LucideIcon;
+  color: ColorKey;
+  items: string[];
+}
+
+const colorClassMap: Record<ColorKey, { bg: string; border: string; icon: string; dot: string }> = {
+  peach: { bg: "bg-peach/10", border: "border-peach/30", icon: "text-peach", dot: "bg-peach" },
+  mango: { bg: "bg-mango/10", border: "border-mango/30", icon: "text-mango", dot: "bg-mango" },
+  leaf: { bg: "bg-leaf/10", border: "border-leaf/30", icon: "text-leaf", dot: "bg-leaf" },
+  cocoa: { bg: "bg-cocoa/10", border: "border-cocoa/30", icon: "text-cocoa", dot: "bg-cocoa" }
+};
+
+const segmentations: Segmentation[] = [
   {
     title: "Demographic",
     icon: UserCheck,
@@ -164,14 +180,9 @@ export default function About() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {segmentations.map((segment, index) => {
-              const IconComponent = segment.icon;
-              const colorClasses = {
-                peach: { bg: "bg-peach/10", border: "border-peach/30", icon: "text-peach", dot: "bg-peach" },
-                mango: { bg: "bg-mango/10", border: "border-mango/30", icon: "text-mango", dot: "bg-mango" },
-                leaf: { bg: "bg-leaf/10", border: "border-leaf/30", icon: "text-leaf", dot: "bg-leaf" },
-                cocoa: { bg: "bg-cocoa/10", border: "border-cocoa/30", icon: "text-cocoa", dot: "bg-cocoa" }
-              }[segment.color];
+            {segmentations.map((segment) => {
+              const Icon = segment.icon;
+              const colorClasses = colorClassMap[segment.color];
               
               return (
                 <div 
@@ -181,7 +192,7 @@ export default function About() {
                   {/* Header */}
                   <div className="flex items-center gap-4 mb-5">
                     <div className={`w-14 h-14 rounded-xl ${colorClasses.bg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComponent className={`w-7 h-7 ${colorClasses.icon}`} />
+                      <Icon className={`w-7 h-7 ${colorClasses.icon}`} />
                     </div>
                     <div>
                       <h4 className="font-heading font-bold text-xl text-cocoa">
