@@ -26,20 +26,20 @@ const benefits = [
 
 const testimonials = [
   {
-    name: "Maria Santos",
-    location: "Makati City",
+    name: "John Sanchez",
+    location: "Quezon City",
     text: "I ordered a box for my birthday and my friends couldn't stop asking where I got them! The peach mango filling is so creamy and the bao is perfectly soft.",
     rating: 5
   },
   {
-    name: "Carlos Reyes",
+    name: "Marcuz Lagao",
     location: "Quezon City",
     text: "Finally, a dessert that hits different! It's like eating peach mango pie but in a cute bao form. Sulit na sulit!",
     rating: 5
   },
   {
-    name: "Angela Cruz",
-    location: "Taguig",
+    name: "Kenneth Salvan",
+    location: "Quezon City",
     text: "Bought it for merienda at the office and now my officemates are addicted. We order almost every week now. 10/10 would recommend!",
     rating: 5
   }
