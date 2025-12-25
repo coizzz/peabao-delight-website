@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import peabaoLogo from "@/assets/peabao-logo.png";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -19,14 +20,18 @@ export function Navbar() {
       <div className="container-main mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-peach to-mango flex items-center justify-center shadow-soft group-hover:shadow-card transition-all duration-300">
-              <span className="text-cocoa font-heading font-bold text-lg md:text-xl">P</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-bold text-cocoa text-lg md:text-xl leading-tight">Peabao</span>
-              <span className="font-heading font-semibold text-peach text-xs md:text-sm leading-tight">Delight</span>
-            </div>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img 
+              src={peabaoLogo} 
+              alt="Peabao Delight Logo" 
+              className="w-12 h-12 md:w-14 md:h-14 object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+            <span 
+              className="text-primary text-xl md:text-2xl tracking-wide"
+              style={{ fontFamily: "'Luckiest Guy', cursive", textShadow: '2px 2px 0 hsl(var(--cocoa) / 0.3)' }}
+            >
+              Peabao Delight
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

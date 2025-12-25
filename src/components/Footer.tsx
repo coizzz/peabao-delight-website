@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Music2 } from "lucide-react";
+import peabaoLogo from "@/assets/peabao-logo.png";
 
 export function Footer() {
   return (
@@ -8,14 +9,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-peach to-mango flex items-center justify-center">
-                <span className="text-cocoa font-heading font-bold text-xl">P</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-cream-light text-xl leading-tight">Peabao</span>
-                <span className="font-heading font-semibold text-peach text-sm leading-tight">Delight</span>
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={peabaoLogo} 
+                alt="Peabao Delight Logo" 
+                className="w-14 h-14 object-contain"
+              />
+              <span 
+                className="text-primary text-2xl"
+                style={{ fontFamily: "'Luckiest Guy', cursive", textShadow: '2px 2px 0 hsl(var(--background) / 0.2)' }}
+              >
+                Peabao Delight
+              </span>
             </div>
             <p className="text-cream-light/80 text-sm leading-relaxed max-w-sm mb-6">
               Filipino dessert in a bao. Experience the joy of peach mango comfort wrapped in every bite.
