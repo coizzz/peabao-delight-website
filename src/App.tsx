@@ -27,7 +27,7 @@ const App = () => (
         </Helmet>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/peabao-delight-website">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
