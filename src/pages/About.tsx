@@ -91,35 +91,129 @@ export default function About() {
       </section>
 
       {/* Our Story Section */}
-      <section className="section-padding bg-cream-light">
+      <section className="section-padding bg-cream-light overflow-hidden">
         <div className="container-main mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-cocoa mb-6">
-                Our Story
-              </h2>
-              <div className="space-y-4 text-cocoa-light leading-relaxed">
-                <p>
-                  Peabao Delight was born from a simple question: What if we could capture the beloved taste of Filipino peach mango pie in a whole new form?
-                </p>
-                <p>
-                  Inspired by the artistry of Chinese xiao long bao and the nostalgic flavors of Filipino merienda, we created something truly unique—a dessert dumpling that's warm, comforting, and unmistakably Filipino.
-                </p>
-                <p>
-                  Every bao is handcrafted with care, using real peach and mango chunks in a creamy, luscious filling. We don't cut corners—no artificial flavors, no preservatives, just pure deliciousness wrapped in a soft, delicate wrapper.
-                </p>
-                <p>
-                  Whether you're treating yourself after a long day, sharing with friends, or surprising someone special, Peabao Delight is here to bring a little sweetness into your life.
-                </p>
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 rounded-full bg-peach/20 text-cocoa font-heading font-semibold text-sm mb-4">
+              🥟 The Peabao Journey
+            </span>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-cocoa">
+              Our Story
+            </h2>
+          </div>
+
+          {/* Story Timeline */}
+          <div className="relative max-w-5xl mx-auto">
+            {/* Center line - hidden on mobile */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-peach via-mango to-peach rounded-full -translate-x-1/2" />
+
+            {/* Story Item 1 - The Question */}
+            <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-12 md:mb-16">
+              <div className="md:w-1/2 md:text-right order-2 md:order-1">
+                <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card hover:shadow-elevated transition-all duration-300">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-peach/20 text-peach font-heading font-semibold text-xs mb-4">
+                    <span>💡</span> The Spark
+                  </div>
+                  <h3 className="font-heading text-xl md:text-2xl font-bold text-cocoa mb-3">
+                    A Simple Question
+                  </h3>
+                  <p className="text-cocoa-light leading-relaxed">
+                    What if we could capture the beloved taste of Filipino peach mango pie in a whole new form? This question sparked our journey to create something truly unique.
+                  </p>
+                </div>
+              </div>
+              <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-peach to-mango flex items-center justify-center shadow-elevated">
+                  <span className="text-2xl md:text-3xl">🤔</span>
+                </div>
+              </div>
+              <div className="md:w-1/2 order-3 hidden md:block" />
+            </div>
+
+            {/* Story Item 2 - The Inspiration */}
+            <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-12 md:mb-16">
+              <div className="md:w-1/2 hidden md:block" />
+              <div className="relative z-10 flex-shrink-0">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-mango to-peach flex items-center justify-center shadow-elevated">
+                  <span className="text-2xl md:text-3xl">✨</span>
+                </div>
+              </div>
+              <div className="md:w-1/2">
+                <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card hover:shadow-elevated transition-all duration-300">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mango/20 text-mango font-heading font-semibold text-xs mb-4">
+                    <span>🎨</span> The Fusion
+                  </div>
+                  <h3 className="font-heading text-xl md:text-2xl font-bold text-cocoa mb-3">
+                    Two Cultures, One Delight
+                  </h3>
+                  <p className="text-cocoa-light leading-relaxed">
+                    Inspired by the artistry of Chinese xiao long bao and the nostalgic flavors of Filipino merienda, we created a dessert dumpling that's warm, comforting, and unmistakably Filipino.
+                  </p>
+                </div>
               </div>
             </div>
+
+            {/* Story Item 3 - The Craft */}
+            <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-12 md:mb-16">
+              <div className="md:w-1/2 md:text-right order-2 md:order-1">
+                <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card hover:shadow-elevated transition-all duration-300">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-leaf/20 text-leaf font-heading font-semibold text-xs mb-4">
+                    <span>👨‍🍳</span> The Craft
+                  </div>
+                  <h3 className="font-heading text-xl md:text-2xl font-bold text-cocoa mb-3">
+                    Handcrafted With Care
+                  </h3>
+                  <p className="text-cocoa-light leading-relaxed">
+                    Every bao is made with real peach and mango chunks in a creamy, luscious filling. No artificial flavors, no preservatives—just pure deliciousness wrapped in a soft, delicate wrapper.
+                  </p>
+                </div>
+              </div>
+              <div className="relative z-10 order-1 md:order-2 flex-shrink-0">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-leaf to-mango flex items-center justify-center shadow-elevated">
+                  <span className="text-2xl md:text-3xl">🥟</span>
+                </div>
+              </div>
+              <div className="md:w-1/2 order-3 hidden md:block" />
+            </div>
+
+            {/* Story Item 4 - The Mission */}
+            <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-12">
+              <div className="md:w-1/2 hidden md:block" />
+              <div className="relative z-10 flex-shrink-0">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-peach to-mango flex items-center justify-center shadow-elevated animate-pulse-soft">
+                  <span className="text-2xl md:text-3xl">❤️</span>
+                </div>
+              </div>
+              <div className="md:w-1/2">
+                <div className="bg-gradient-to-br from-peach/20 to-mango/20 rounded-2xl p-6 md:p-8 border-2 border-peach/30">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cocoa text-cream-light font-heading font-semibold text-xs mb-4">
+                    <span>🎯</span> Our Mission
+                  </div>
+                  <h3 className="font-heading text-xl md:text-2xl font-bold text-cocoa mb-3">
+                    Sweetness in Every Bite
+                  </h3>
+                  <p className="text-cocoa-light leading-relaxed">
+                    Whether you're treating yourself after a long day, sharing with friends, or surprising someone special—Peabao Delight is here to bring a little sweetness into your life.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Image */}
+          <div className="mt-16 max-w-2xl mx-auto">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-peach/20 to-mango/20 rounded-3xl blur-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-peach/30 to-mango/30 rounded-3xl blur-2xl" />
               <img
                 src={heroBao}
                 alt="Peabao Delight - Peach Mango Xiao Long Bao"
                 className="relative w-full rounded-3xl shadow-elevated"
               />
+              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-card rounded-2xl p-4 md:p-6 shadow-elevated">
+                <p className="font-heading font-bold text-cocoa text-lg md:text-xl">"Filipino dessert</p>
+                <p className="font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-peach to-mango text-lg md:text-xl">in a bao."</p>
+              </div>
             </div>
           </div>
         </div>
