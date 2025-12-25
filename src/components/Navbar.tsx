@@ -21,11 +21,11 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-peach/20 to-mango/30 flex items-center justify-center overflow-hidden shadow-soft group-hover:shadow-card transition-all duration-300">
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-soft group-hover:shadow-card transition-all duration-300 border border-border/30">
               <img 
                 src={peabaoLogo} 
                 alt="Peabao Delight Logo" 
-                className="w-12 h-12 md:w-14 md:h-14 object-contain group-hover:scale-110 transition-transform duration-300"
+                className="w-[90%] h-[90%] object-contain group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <span 
